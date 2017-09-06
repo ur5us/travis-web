@@ -72,6 +72,10 @@ export default Model.extend(DurationCalculations, DurationAttributes, {
     }
   },
 
+  repoSlug: Ember.computed('repositorySlug', function () {
+    return this.get('repositorySlug');
+  }),
+
   getCurrentState() {
     return this.get('currentState.stateName');
   },
